@@ -6,7 +6,7 @@ function Pass() {
   return (
     <div className="Drag-and-drop">
       <DropFileInput></DropFileInput>
-      <input type="text" placeholder="Оставь комментарий к изменениям"/>
+      <input type="text" className="Comment" placeholder="Оставь комментарий к изменениям" />
     </div>
   );
 }
