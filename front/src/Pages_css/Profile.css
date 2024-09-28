@@ -87,7 +87,8 @@
 .Projects{
     grid-column: 2/10;
     grid-row: 4/10;
-    overflow: scroll;
+    overflow-y:visible;
+    overflow-x: hidden;
 }
 
 
