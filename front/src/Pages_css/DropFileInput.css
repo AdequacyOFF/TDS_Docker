@@ -1,6 +1,10 @@
 
 .DragAndDrop {
   font-family: "NanitoSans", sans-serif;
+  width: 20%;
+  height: 40%;
+  margin-left: 40%;
+  margin-top: 1%;
 }
 
 .drop-file-input {
@@ -44,6 +48,7 @@
 
 .drop-file-preview {
   margin-top: 30px;
+  height: 10%;
 }
 
 .drop-file-preview p {
