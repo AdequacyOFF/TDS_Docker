@@ -24,7 +24,15 @@ public class UserService {
         return Collections.emptyList();
     }
     public List<User> getAllUsers(){
-        return userRepository.findAll();
+        List<User> users = userRepository.findAll();
+        System.out.println(users);
+        for (User user : users) {
+            System.out.println(user);
+            System.out.println(user.getLogin());
+            System.out.println(user.getPassword());
+            }
+
+        return users;
      }
     
 }
