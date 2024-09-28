@@ -1,7 +1,10 @@
 package com.tds.tds_project.entity;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -13,7 +16,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id", columnDefinition = "serial")
     @JsonProperty("user_id")
-    private  Integer id;
+    private  Integer user_id;
 
     @Column(name = "login", nullable = false)
     @JsonProperty("login")
@@ -23,13 +26,23 @@ public class User {
     @JsonProperty("password")
     private String password;
 
-    @ManyToMany
-    @JoinTable(
-        name = "user_team",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "team_id")
-    )
-    private Set<Team> teams;
+    @OneToMany(mappedBy = "user")
+    Set<UserTeam> rely;
+
+
+    public List<Team> getTeamsList() {
+        return rely.stream()
+            .map(UserTeam::getTeam)
+            .collect(Collectors.toList());
+    }
+
+    public Set<UserTeam> getRely() {
+        return rely;
+    }
+
+    public void setRely(Set<UserTeam> rely) {
+        this.rely = rely;
+    }
 
     User() {}
 
@@ -41,7 +54,7 @@ public class User {
 // Геттеры и сеттеры
 
     public Integer getId() {
-        return id;
+        return user_id;
     }
     public String getLogin() {
         return login;
@@ -55,14 +68,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-    public Set<Team> getTeams() {
-        return teams;
-    }
-    public void setTeams(Set<Team> teams) {
-        this.teams = teams;
-    }
 
-    
-
-    
 }
