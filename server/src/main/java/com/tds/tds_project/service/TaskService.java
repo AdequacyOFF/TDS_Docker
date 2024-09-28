@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import java.util.Collections;
 import java.util.List;
 import com.tds.tds_project.repository.TaskRepository;
-import com.tds.tds_project.entity.Project;
 import com.tds.tds_project.entity.Subtask;
 import com.tds.tds_project.entity.Task;
 
