@@ -33,15 +33,16 @@ function Register() {
 
   return (
     <div className="section">
-      <form className="answer-txt" onSubmit={handleLogin}>
-        <h1>ВХОД</h1>
-        <div className="registrationField">
+      <h1>ВХОД</h1>
+      <form id="signin" onSubmit={handleLogin}>
+        <div  id='wrapper'>
           <input
             type="text"
             placeholder="Логин"
             value={login}
             onChange={(e) => setLogin(e.target.value)}
             required
+            id="user"
           />
           <input
             type="password"
@@ -50,16 +51,18 @@ function Register() {
             onChange={(e) => setPassword(e.target.value)}
             minLength="8"
             required
+            id="pass"
           />
         </div>
-        <button className="registerBtn" type="submit">
-          ВОЙТИ
+        <button  type="submit">
+        &#xf0da;
         </button>
       </form>
 
       {/* Conditionally render the Link component if userId is set */}
       {userId && <Link to="/Home">Перейти на домашнюю страницу</Link>}
     </div>
+    
   );
 }
 
