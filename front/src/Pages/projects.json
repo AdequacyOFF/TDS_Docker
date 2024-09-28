@@ -1,0 +1,312 @@
+[
+  {
+      "team_name": "alpha",
+      "project_name": "projectA",
+      "project_id": "2",
+      "lead_name": "John Doe",
+      "description": "This is the first project",
+      "progress": 45,
+      "begin": "01.01.2020",
+      "end": "01.06.2020",
+      "tasks": [
+          {
+              "name": "Task 1",
+              "description": "Initial task description",
+              "progress": 50,
+              "begin": "01.01.2020",
+              "end": "01.02.2020",
+              "subtasks": [
+                  {
+                      "name": "Subtask A",
+                      "description": "Subtask description A",
+                      "status": 0,
+                      "begin": "01.01.2020",
+                      "end": "15.01.2020",
+                      "executor": "Alice"
+                  },
+                  {
+                      "name": "Subtask B",
+                      "description": "Subtask description B",
+                      "status": 100,
+                      "begin": "16.01.2020",
+                      "end": "01.02.2020",
+                      "executor": "Bob"
+                  }
+              ]
+          },
+          {
+              "name": "Task 2",
+              "description": "Another task description",
+              "progress": 40,
+              "begin": "01.02.2020",
+              "end": "01.03.2020",
+              "subtasks": [
+                  {
+                      "name": "Subtask C",
+                      "description": "Subtask description C",
+                      "status": 20,
+                      "begin": "01.02.2020",
+                      "end": "15.02.2020",
+                      "executor": "Charlie"
+                  },
+                  {
+                      "name": "Subtask D",
+                      "description": "Subtask description D",
+                      "status": 80,
+                      "begin": "16.02.2020",
+                      "end": "01.03.2020",
+                      "executor": "David"
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "team_name": "beta",
+      "project_name": "projectB",
+      "project_id": "3",
+      "lead_name": "Jane Smith",
+      "description": "A follow-up project",
+      "progress": 30,
+      "begin": "02.02.2021",
+      "end": "02.07.2021",
+      "tasks": [
+          {
+              "name": "Task Alpha",
+              "description": "Starting task for beta",
+              "progress": 30,
+              "begin": "02.02.2021",
+              "end": "02.03.2021",
+              "subtasks": [
+                  {
+                      "name": "Subtask 1",
+                      "description": "First subtask",
+                      "status": 10,
+                      "begin": "02.02.2021",
+                      "end": "15.02.2021",
+                      "executor": "Eve"
+                  },
+                  {
+                      "name": "Subtask 2",
+                      "description": "Second subtask",
+                      "status": 90,
+                      "begin": "16.02.2021",
+                      "end": "02.03.2021",
+                      "executor": "Frank"
+                  }
+              ]
+          },
+          {
+              "name": "Task Beta",
+              "description": "Another important task",
+              "progress": 20,
+              "begin": "03.03.2021",
+              "end": "02.04.2021",
+              "subtasks": [
+                  {
+                      "name": "Subtask X",
+                      "description": "X subtask",
+                      "status": 20,
+                      "begin": "03.03.2021",
+                      "end": "15.03.2021",
+                      "executor": "Grace"
+                  },
+                  {
+                      "name": "Subtask Y",
+"description": "Y subtask",
+                        "status": 60,
+                        "begin": "16.03.2021",
+                        "end": "02.04.2021",
+                        "executor": "Hank"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "team_name": "gamma",
+        "project_name": "projectC",
+        "project_id": "4",
+        "lead_name": "Mark Johnson",
+        "description": "Third phase project",
+        "progress": 75,
+        "begin": "03.03.2022",
+        "end": "03.08.2022",
+        "tasks": [
+            {
+                "name": "Task 3.1",
+                "description": "Main task for gamma",
+                "progress": 70,
+                "begin": "03.03.2022",
+                "end": "03.04.2022",
+                "subtasks": [
+                    {
+                        "name": "Subtask 3.1.1",
+                        "description": "Detail for task 3.1",
+                        "status": 50,
+                        "begin": "03.03.2022",
+                        "end": "20.03.2022",
+                        "executor": "Ivy"
+                    },
+                    {
+                        "name": "Subtask 3.1.2",
+                        "description": "Another detail",
+                        "status": 100,
+                        "begin": "21.03.2022",
+                        "end": "03.04.2022",
+                        "executor": "Jack"
+                    }
+                ]
+            },
+            {
+                "name": "Task 3.2",
+                "description": "Secondary task for gamma",
+                "progress": 80,
+                "begin": "04.04.2022",
+                "end": "03.05.2022",
+                "subtasks": [
+                    {
+                        "name": "Subtask 3.2.1",
+                        "description": "Additional detail",
+                        "status": 80,
+                        "begin": "04.04.2022",
+                        "end": "20.04.2022",
+                        "executor": "Kira"
+                    },
+                    {
+                        "name": "Subtask 3.2.2",
+                        "description": "Last detail",
+                        "status": 90,
+                        "begin": "21.04.2022",
+                        "end": "03.05.2022",
+                        "executor": "Leo"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "team_name": "delta",
+        "project_name": "projectD",
+        "project_id": "5",
+        "lead_name": "Emily Davis",
+        "description": "Fourth project with new features",
+        "progress": 60,
+        "begin": "04.04.2023",
+        "end": "04.09.2023",
+        "tasks": [
+            {
+                "name": "Task 4.1",
+                "description": "Delta team's task",
+                "progress": 60,
+                "begin": "04.04.2023",
+                "end": "04.05.2023",
+                "subtasks": [
+                    {
+                        "name": "Subtask 4.1.1",
+                        "description": "Subtask for 4.1",
+                        "status": 40,
+                        "begin": "04.04.2023",
+                        "end": "20.04.2023",
+                        "executor": "Mia"
+                    },
+                    {
+                        "name": "Subtask 4.1.2",
+                        "description": "Another subtask for 4.1",
+                        "status": 80,
+                        "begin": "21.04.2023",
+                        "end": "04.05.2023",
+                        "executor": "Noah"
+                    }
+                ]
+            },
+            {
+                "name": "Task 4.2",
+                "description": "Secondary task for delta",
+                "progress": 70,
+                "begin": "05.05.2023",
+                "end": "04.06.2023",
+                "subtasks": [
+                    {
+                        "name": "Subtask 4.2.1",
+                        "description": "First subtask for 4.2",
+                        "status": 70,
+                        "begin": "05.05.2023",
+                        "end": "20.05.2023",
+                        "executor": "Olivia"
+                    },
+                    {
+                        "name": "Subtask 4.2.2",
+                        "description": "Final subtask for 4.2",
+                        "status": 90,
+                        "begin": "21.05.2023",
+                        "end": "04.06.2023",
+                        "executor": "Paul"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "team_name": "epsilon",
+        "project_name": "projectE",
+        "project_id": "6",
+        "lead_name": "Robert Brown",
+        "description": "Final project in the series",
+        "progress": 85,
+        "begin": "05.05.2024",
+        "end": "05.10.2024",
+        "tasks": [
+            {
+                "name": "Task 5.1",
+                "description": "Key task for epsilon",
+                "progress": 85,
+                "begin": "05.05.2024",
+                "end": "05.06.2024",
+                "subtasks": [
+                    {
+                        "name": "Subtask 5.1.1",
+                        "description": "Detail for task 5.1",
+                        "status": 60,
+                        "begin": "05.05.2024",
+                        "end": "20.05.2024",
+                        "executor": "Quinn"
+                    },
+                    {
+                        "name": "Subtask 5.1.2",
+                        "description": "Additional detail for 5.1",
+                        "status": 100,
+                        "begin": "21.05.2024",
+                        "end": "05.06.2024",
+                        "executor": "Riley"
+                    }
+                ]
+            },
+            {
+                "name": "Task 5.2",
+                "description": "Final task for epsilon",
+                "progress": 90,
+                "begin": "06.06.2024",
+                "end": "05.07.2024",
+                "subtasks": [
+                    {
+                        "name": "Subtask 5.2.1",
+                        "description": "First subtask for 5.2",
+                        "status": 80,
+                        "begin": "06.06.2024",
+                        "end": "20.06.2024",
+                        "executor": "Sam"
+                    },
+                    {
+                        "name": "Subtask 5.2.2",
+                        "description": "Final subtask for 5.2",
+                        "status": 100,
+                        "begin": "21.06.2024",
+                        "end": "05.07.2024",
+                        "executor": "Taylor"
+                    }
+                ]
+            }
+        ]
+    }
+]

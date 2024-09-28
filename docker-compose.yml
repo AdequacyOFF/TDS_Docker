@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  tds:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    container_name: tds
+    environment:
+      POSTGRES_DB: tdsdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: tdspassword
+    ports:
+      - "5432:5432"
+    networks:
+      - tds-network
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://tds:5432/tdsdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: tdspassword
+    ports:
+      - "8080:8080"
+    networks:
+      - tds-network
+    depends_on:
+      - tds
+
+  frontend:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    container_name: frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    networks:
+      - tds-network
+    environment:
+      - VITE_HOST=0.0.0.0
+
+networks:
+  tds-network:
+    driver: bridge

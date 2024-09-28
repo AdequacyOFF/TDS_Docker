@@ -1,0 +1,36 @@
+.project-detail {
+  padding: 1%;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 50%;
+  height: 80%;
+  margin: auto;
+  margin-top: 3%;
+  overflow: scroll;
+}
+
+.project-detail h1 {
+  font-size: 1.8em;
+}
+
+.project-detail p {
+  margin: 10px 0;
+}
+
+.project-detail ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.project-detail li {
+  margin: 5px 0;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.SubTasks{
+  display: inline;
+}
+

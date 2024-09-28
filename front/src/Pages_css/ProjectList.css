@@ -1,0 +1,33 @@
+.project-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Project_name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.GM_info {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.Manage_project button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Progress {
+  font-weight: bold;
+  color: green;
+}

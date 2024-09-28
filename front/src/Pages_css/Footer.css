@@ -1,0 +1,105 @@
+.Footer{
+  background-color: rgb(42, 42, 42);
+  height: 100%;
+  box-shadow: 0px 4px 38px 29px rgba(0, 0, 0, 0.25);
+  visibility: visible;
+  display: grid;
+  grid-template-columns: repeat(24,4.166vw);
+  grid-template-rows: repeat(24,4.166%);
+}
+
+
+
+
+.Footer {
+  font-family: 'Nunito Sans Variable', sans-serif;
+}
+
+.Strip{
+  grid-column: 2 /-2;
+  grid-row: 14/15;
+  width: 100%;
+  color: rgb(114, 114, 114);
+  background-color: rgb(114, 114, 114);
+}
+
+.Logo_AdOFF{
+  width: 20% !important;
+  height: auto;
+}
+
+.Logo_AdOFF:hover{
+  cursor: pointer;
+}
+
+.Logo_footer{
+  grid-column: 2/6;
+  grid-row: 2/10;
+}
+
+.Cooperation_text {
+  grid-row: 10/13;
+  grid-column: 5/22;
+  text-align: center;
+}
+
+.Cooperation_text a {
+  font-size: 1rem;
+  margin-left: 1vw;
+  display: inline-block;
+  color: rgb(196, 196, 196);
+  text-decoration: none;
+}
+.Cooperation_text a:hover{
+  color: rgb(147, 146, 146);
+  text-decoration-line: underline;
+}
+
+@media(width < 1800px){
+  .Cooperation_text a{
+    font-size: 0.8rem;
+  }
+  .Cooperation_text{
+
+  }
+}
+
+@media(width < 1400px){
+  .Cooperation_text a{
+    font-size: 0.6rem;
+  }
+}
+
+@media(width < 900px){
+  .Footer{
+    visibility: hidden;
+  }
+}
+
+.contact_information{
+  grid-column: 11/15;
+  grid-row: 17/-2;
+}
+
+.icons_contact{
+  text-align: center;
+}
+
+
+.Copyright p{
+  color: rgb(114, 114, 114);
+  font-family: 'Nunito Sans Variable', sans-serif;
+  font-size: 0.6vw;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+.icons_contact img{
+  width: 9%;
+  height: auto;
+}
+
+.icons_contact img:hover{
+  cursor: pointer;
+}

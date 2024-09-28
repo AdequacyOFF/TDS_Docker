@@ -1,0 +1,129 @@
+.Profile-wrapper{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10%);
+}
+
+.Profile_photo{
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+
+.Profile_photo img{
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+    margin-top: 20%;
+}
+
+.User_info{
+    margin-top: 5%;
+    grid-row: 1/3;
+    grid-column: 3/5;
+}
+
+.Name{
+    color: rgb(255, 255, 255);
+    font-family: 'Nunito Sans Variable', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+.ID{
+    color: rgb(68, 68, 68);
+    font-family: 'Nunito Sans Variable', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+.Project_buttons{
+    grid-row: 3/4;
+    grid-column: 3/6;
+}
+
+.Project_buttons button{
+    border-radius: 7px;
+    margin-right: 1%;
+    margin-top: 3%;
+    color: rgb(0, 0, 0);
+    font-family: 'Nunito Sans Variable', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-align: center;
+
+}
+
+.Project_buttons button:hover{
+    background: rgb(191, 189, 189);
+
+}
+
+.Search{
+    grid-column: 6/10;
+    grid-row: 3/4;
+    margin-top: 3%;
+    
+}
+
+.Search input{
+    width: 100%;
+    border-radius: 7px;
+    padding-left: 3%;
+    font-size: 18px;
+    height: 5%;
+    margin: 0;
+}
+
+.Projects{
+    grid-column: 2/10;
+    grid-row: 4/10;
+    overflow: scroll;
+}
+
+
+.Project_name{
+    width: 10%;
+    display: inline-block;
+    margin: 0;
+    height: 100%;
+}
+
+.GM_info{
+    width: 30%;
+    display: inline-block;
+    margin: 0;
+    height: 100%;
+}
+
+.GM{
+    margin: 0;
+}
+
+.Manage_project{
+    width: 20%;
+    display: inline-block;
+    margin: 0;
+    height: 100%;
+}
+
+.Progress{
+    width: 10%;
+    display: inline-block;
+    margin: 0;
+    height: 100%;
+}
+
+.Now{
+    margin: 0;
+    margin-top: -5%;
+}
