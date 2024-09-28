@@ -24,7 +24,7 @@
 }
 
 .Logo_AdOFF{
-  width: 20% !important;
+  width: 25% !important;
   height: auto;
 }
 
@@ -83,6 +83,7 @@
 
 .icons_contact{
   text-align: center;
+  height: 50%;
 }
 
 
