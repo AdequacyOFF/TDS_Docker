@@ -1,6 +1,14 @@
 package com.tds.tds_project.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import com.tds.tds_project.entity.Team;
+import java.util.List;
+import java.util.Optional;
 
-public interface TeamRepository extends JpaRepository<Team, Integer> {}
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.tds.tds_project.entity.Project;
+import com.tds.tds_project.entity.Team;
+import com.tds.tds_project.entity.User;
+
+public interface TeamRepository extends JpaRepository<Team, Integer> {
+    Optional<Team> findById(Integer team_id);
+}

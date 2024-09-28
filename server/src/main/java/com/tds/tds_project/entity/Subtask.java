@@ -43,7 +43,7 @@ public class Subtask {
 
     @Column(name = "t_id", nullable = false)
     @JsonProperty("t_id")
-    private Integer t_id;
+    private Integer taskId;
 
     Subtask() {}
 
@@ -55,7 +55,7 @@ public class Subtask {
     this.begin = begin;
     this.end = end;
     this.exe_id = exe_id;
-    this.t_id = t_id;
+    this.taskId = t_id;
   }
 
     // Геттеры и сеттеры
@@ -99,9 +99,9 @@ public class Subtask {
         this.exe_id = exe_id;
     }
     public Integer getTaskId() {
-        return t_id;
+        return taskId;
     }
     public void setTaskId(Integer t_id) {
-        this.t_id = t_id;
+        this.taskId = t_id;
     }
 }
