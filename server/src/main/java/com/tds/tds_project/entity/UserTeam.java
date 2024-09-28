@@ -1,9 +1,6 @@
 package com.tds.tds_project.entity;
 
 import java.io.Serializable;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import jakarta.persistence.*;
 
 @Embeddable

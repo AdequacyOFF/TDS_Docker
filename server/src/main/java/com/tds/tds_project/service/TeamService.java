@@ -8,7 +8,6 @@ import java.util.List;
 import com.tds.tds_project.repository.TeamRepository;
 import com.tds.tds_project.entity.Project;
 import com.tds.tds_project.entity.Team;
-import com.tds.tds_project.entity.User;
 
 @Service
 public class TeamService {
