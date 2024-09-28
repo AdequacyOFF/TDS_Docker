@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import com.tds.tds_project.repository.UserRepository;
 import com.tds.tds_project.entity.User;
@@ -22,9 +23,8 @@ public class UserService {
         }
         return Collections.emptyList();
     }
+    public List<User> getAllUsers(){
+        return userRepository.findAll();
+     }
     
-    
-    public User createUser(User user) {
-        return userRepository.save(user);
-    }
 }
