@@ -1,11 +1,12 @@
 import React from "react";
 import '../Pages_css/Pass.css';
-// import DropFileInput from "./DropFileInput.jsx"
+import DropFileInput from "./DropFileInput.jsx"
 
 function Pass() {
   return (
     <div className="Drag-and-drop">
-      {/* <DropFileInput></DropFileInput> */}
+      <DropFileInput></DropFileInput>
+      <input type="text" placeholder="Оставь комментарий к изменениям"/>
     </div>
   );
 }

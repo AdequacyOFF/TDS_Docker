@@ -96,8 +96,8 @@ const DropFileInput = (props) => {
     );
 }
 
-DropFileInput.propTypes = {
-    onFileChange: PropTypes.func
-}
+// DropFileInput.propTypes = {
+//     onFileChange: PropTypes.func
+// }
 
 export default DropFileInput;
