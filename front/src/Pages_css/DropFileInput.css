@@ -1,12 +1,3 @@
-@font-face {
-  font-family: "NanitoSans";
-  src: local("NanitoSans-Black"),
-    local("NanitoSans-Black"),
-    url("NanitoSans-Black.ttf") format("ttf"),
-    url("nanitosans-black.woff") format("woff"),
-    url("nanitosans-black.woff2") format("woff2"),
-  
-}
 
 .DragAndDrop {
   font-family: "NanitoSans", sans-serif;

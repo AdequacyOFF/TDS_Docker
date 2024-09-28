@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import projects from './projects.json'; 
 import './../Pages_css/ProjectDetail.css'; 
@@ -54,6 +55,9 @@ const ProjectDetail = () => {
                       <p><strong>Исполнитель:</strong> {subtask.executor}</p>
                       <p><strong>Начало:</strong> {subtask.begin}</p>
                       <p><strong>Окончание:</strong> {subtask.end}</p>
+                      <Link to="/Pass">
+                        <button>СДАТЬ</button>
+                      </Link>
                     </li>
                   ))}
                 </ul>
