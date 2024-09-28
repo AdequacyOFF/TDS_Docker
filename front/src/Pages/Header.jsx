@@ -16,9 +16,9 @@ function Header() {
       <p className='TDS'>
         <p className='TDS_b'>T</p>
         ask
-        <p className='TDS_b'>D</p>
-        istribution
-        <p className='TDS_b'>S</p>
+        <p className='TDS_b'> D</p>
+        istribution   
+        <p className='TDS_b'> S</p>
         ystem
       </p>
     </div>
