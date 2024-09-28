@@ -4,18 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import com.tds.tds_project.service.TeamService;
+import com.tds.tds_project.entity.Project;
 import com.tds.tds_project.entity.Team;
 
 @RestController
-@RequestMapping("/api/teams")
+@RequestMapping("/api/team")
 public class TeamController {
     @Autowired
     private TeamService teamService;
 
     @GetMapping
-    public List<Team> getAllTeams() {
-        return teamService.getAllTeams();
-    }
+    public List<Project> getAllTeamProjects(@RequestParam Integer id) {
+        return teamService.getProjectsByTeamId(id);
+}
 
     @PostMapping
     public Team createTeam(@RequestBody Team team) {

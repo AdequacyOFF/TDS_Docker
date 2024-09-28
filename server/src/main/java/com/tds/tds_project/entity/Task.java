@@ -2,6 +2,9 @@ package com.tds.tds_project.entity;
 
 import jakarta.persistence.*;
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -12,7 +15,7 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "t_id", columnDefinition = "serial")
-    @JsonProperty("t_id")
+    @JsonProperty("taskId")
     private  Integer id;
 
     @Column(name = "t_name", nullable = false)
@@ -39,7 +42,16 @@ public class Task {
 
     @Column(name = "pr_id", nullable = false)
     @JsonProperty("pr_id")
-    private Integer pr_id;
+    private Integer projectId;
+
+    @OneToMany(mappedBy = "taskId", fetch = FetchType.LAZY)
+    @JsonProperty("subtasksList")
+    private Set<Subtask> subtasksList;
+  public List<Subtask> getSubtasksList(Integer taskId) {
+        return subtasksList.stream()
+            .filter(task -> task.getTaskId().equals(taskId))
+            .collect(Collectors.toList());
+    }
 
     Task() {}
 
@@ -50,7 +62,7 @@ public class Task {
     this.progress = progress;
     this.begin = begin;
     this.end = end;
-    this.pr_id = pr_id;
+    this.projectId = pr_id;
   }
 
     public Integer getId() {
@@ -97,12 +109,12 @@ public class Task {
         this.end = end;
     }
 
-    public Integer getPr_id() {
-        return pr_id;
+    public Integer getProjectId() {
+        return projectId;
     }
 
     public void setPr_id(Integer pr_id) {
-        this.pr_id = pr_id;
+        this.projectId = pr_id;
     }
 
     // Геттеры и сеттеры

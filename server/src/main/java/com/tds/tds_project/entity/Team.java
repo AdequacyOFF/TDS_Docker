@@ -1,6 +1,8 @@
 package com.tds.tds_project.entity;
 
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -24,13 +26,18 @@ public class Team {
     @JsonProperty("leadId")
     private Integer leadId;
 
-    @ManyToMany
-    @JoinTable(
-        name = "user_team",
-        joinColumns = @JoinColumn(name = "team_id"),
-        inverseJoinColumns = @JoinColumn(name = "user_id")
-    )
-    private Set<Team> teams;
+    @OneToMany(mappedBy = "team")
+    Set<UserTeam> rely;
+
+    @OneToMany(mappedBy = "team_id", fetch = FetchType.LAZY)
+    @JsonProperty("projectList")
+    private Set<Project> projectList;
+
+    public List<Project> getProjectList(Integer teamId) {
+        return projectList.stream()
+            .filter(project -> project.getTeamId().equals(teamId))
+            .collect(Collectors.toList());
+    }
 
     Team() {}
 
