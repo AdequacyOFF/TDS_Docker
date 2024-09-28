@@ -5,3 +5,4 @@ ckp
 .pytest_cache
 .vscode
 Files
+postgres-data
