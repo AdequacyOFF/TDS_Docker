@@ -1,7 +1,6 @@
 package com.tds.tds_project.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,8 +24,10 @@ public class UserController {
     
     @PostMapping("/login")
     public Optional <User> login(@RequestBody Map<String, String> userData) {
+        System.out.println(userData.get("login").trim());
+        System.out.println(userData.get("password").trim());
         return userService.getAllUsers().stream()
-            .filter(user -> user.getLogin().equals(userData.get("login")) && user.getPassword().equals(userData.get("password")))
+            .filter(user -> user.getLogin().equalsIgnoreCase(userData.get("login").trim()) && user.getPassword().equalsIgnoreCase(userData.get("password").trim()))
             .findFirst();
     }
 
