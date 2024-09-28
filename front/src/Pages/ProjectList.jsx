@@ -13,7 +13,9 @@ const ProjectList = () => {
           <p className="Project_name">
             {project.project_name}
             <br />
-            #{project.project_id}
+            <p className='Hesh'>
+              #{project.project_id}
+            </p>
           </p>
           <p className="GM_info">
             <p className="GM">
@@ -26,9 +28,11 @@ const ProjectList = () => {
           <p className="Manage_project">
             <button onClick={() => navigate(`/project/${project.project_id}`)}>Управлять проектом</button>
           </p>
-          <p className="Progress">
-            {project.progress}%
-          </p>
+          <div className="Progress">
+            <p>
+              {project.progress}%
+            </p>
+          </div>
         </div>
       ))}
     </div>
