@@ -9,7 +9,7 @@ import com.tds.tds_project.entity.Task;
 import com.tds.tds_project.entity.Subtask;
 
 @RestController
-@RequestMapping("/api/task")
+@RequestMapping("/api/task-javaconfig")
 public class TaskController {
     @Autowired
     private TaskService taskService;

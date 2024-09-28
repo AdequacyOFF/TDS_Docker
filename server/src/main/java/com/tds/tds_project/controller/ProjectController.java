@@ -8,7 +8,7 @@ import com.tds.tds_project.entity.*;
 
 
 @RestController
-@RequestMapping("/api/project")
+@RequestMapping("/api/project-javaconfig")
 public class ProjectController {
     @Autowired
     private ProjectService projectService;

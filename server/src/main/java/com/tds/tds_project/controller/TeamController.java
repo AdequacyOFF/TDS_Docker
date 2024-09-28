@@ -8,7 +8,7 @@ import com.tds.tds_project.entity.Project;
 import com.tds.tds_project.entity.Team;
 
 @RestController
-@RequestMapping("/api/team")
+@RequestMapping("/api/team-javaconfig")
 public class TeamController {
     @Autowired
     private TeamService teamService;

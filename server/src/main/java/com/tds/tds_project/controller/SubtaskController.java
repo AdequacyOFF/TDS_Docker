@@ -7,7 +7,7 @@ import com.tds.tds_project.service.SubtaskService;
 import com.tds.tds_project.entity.Subtask;
 
 @RestController
-@RequestMapping("/api/subtasks")
+@RequestMapping("/api/subtasks-javaconfig")
 public class SubtaskController {
     @Autowired
     private SubtaskService subtaskService;
