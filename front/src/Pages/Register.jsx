@@ -48,7 +48,7 @@ function Register() {
             placeholder="Пароль"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            minLength="8"
+            
             required
           />
         </div>
