@@ -8,6 +8,8 @@ import com.tds.tds_project.service.serviceImpl.FileServiceImpl;
 import com.tds.tds_project.utils.TypeChecker;
 import com.tds.tds_project.paths.UploadPaths;
 import com.tds.tds_project.utils.ZipUtils;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.transaction.Transactional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +22,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-
+@Tag(name = "Файловый контроллер", description = "Обеспечивает работу с файлами - их загрузку, просмотр, удаление и др.")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api")

@@ -8,10 +8,14 @@ import java.util.Map;
 import java.util.Optional;
 
 import com.tds.tds_project.service.UserService;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import com.tds.tds_project.entity.User;
 import com.tds.tds_project.entity.Team;
 
 
+@Tag(name = "Контроллер пользователей", description = "Позволяет взаимодействовать с сущностью пользователя, а также получать всю информацию о нем")
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
