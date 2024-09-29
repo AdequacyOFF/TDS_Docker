@@ -11,18 +11,17 @@ import com.tds.tds_project.service.UserService;
 import com.tds.tds_project.entity.User;
 import com.tds.tds_project.entity.Team;
 
-@CrossOrigin
+
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
     @Autowired
     private UserService userService;
-
     @GetMapping
-    public List<Team> getAllUserTeams(@RequestParam Integer id) {
+    public List<Team> getAllUserTeams(@RequestHeader("id") Integer id) {
         return userService.getTeamsByUserId(id);
     }
-    @CrossOrigin
+    
     @PostMapping("/login")
     public Optional <User> login(@RequestBody Map<String, String> userData) {
         System.out.println(userData.get("login").trim());

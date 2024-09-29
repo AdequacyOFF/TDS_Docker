@@ -4,23 +4,21 @@ import ProjectList from './ProjectList';
 import '../Pages_css/Profile.css';
 
 function Profile() {
-  const [userData, setUserData] = useState({ login: "", id: "" });
+  const [userData, setUserData] = useState({ login: "", id: "" , teamsId: []});
 
   useEffect(() => {
     const cachedUserId = localStorage.getItem('userId') || sessionStorage.getItem('userId');
 
     if (cachedUserId) {
-      fetch(`http://localhost:8080/api/user/profile`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ id: cachedUserId }),
-      })
+      fetch(`http://localhost:8080/api/user`,{
+      headers: {
+        id: cachedUserId,
+      }})
         .then(response => response.json())
         .then(data => {
-          if (data.id && data.login) {
-            setUserData({ name: data.login, id: data.id });
+          if (data.id && data.login && data.teamList) {
+            const teamsId = data.teamList.map(team => team.id);
+            setUserData({ name: data.login, id: data.id, teamsId: teamsId});
           } else {
             console.error("Ошибка при получении данных пользователя:", data);
           }

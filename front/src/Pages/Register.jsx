@@ -52,11 +52,10 @@ function Register() {
             required
           />
         </div>
-        <Link to='/Profile'>
-        <button className="registerBtn" type="submit">
+       
+        <Link to='/Profile'><button className="registerBtn" type="submit">
           ВОЙТИ
-        </button>
-        </Link>
+        </button></Link>
       </form>
     </div>
   );
