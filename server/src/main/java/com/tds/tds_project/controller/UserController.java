@@ -30,5 +30,6 @@ public class UserController {
             .filter(user -> user.getLogin().equalsIgnoreCase(userData.get("login").trim()) && user.getPassword().equalsIgnoreCase(userData.get("password").trim()))
             .findFirst();
     }
+    
 
 }

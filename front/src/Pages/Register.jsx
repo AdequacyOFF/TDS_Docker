@@ -8,7 +8,7 @@ function Register() {
   const [userId, setUserId] = useState(() => localStorage.getItem('userId'));
 
   const handleLogin = (event) => {
-    event.preventDefault(); // Prevent default form submission
+ // Prevent default form submission
     fetch("http://localhost:8080/api/user/login", {
       method: "POST",
       headers: {
@@ -33,7 +33,7 @@ function Register() {
 
   return (
     <div className="section">
-      <form className="answer-txt" onSubmit={handleLogin}>
+      <form className="answer-txt">
         <h1>ВХОД</h1>
         <div className="registrationField">
           <input
@@ -53,7 +53,7 @@ function Register() {
           />
         </div>
        
-        <Link to='/Profile'><button className="registerBtn" type="submit">
+        <Link to='/Profile'><button className="registerBtn" type="submit" onClick={handleLogin()}>
           ВОЙТИ
         </button></Link>
       </form>
