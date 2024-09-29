@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import com.tds.tds_project.repository.UserRepository;
 import com.tds.tds_project.entity.User;
@@ -33,6 +34,6 @@ public class UserService {
             }
 
         return users;
-     }
+        }
     
 }

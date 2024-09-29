@@ -26,6 +26,9 @@ public class User {
     @JsonProperty("password")
     private String password;
 
+    @Column(name = "number_of_files")
+    private Long numberOfFiles;
+
     @OneToMany(mappedBy = "user")
     Set<UserTeam> rely;
 
@@ -111,6 +114,12 @@ public class User {
     }
     public void setPassword(String password) {
         this.password = password;
+    }
+    public Long getNumberOfFiles() {
+        return numberOfFiles;
+    }
+    public void setNumberOfFiles(Long numberOfFiles) {
+        this.numberOfFiles = numberOfFiles;
     }
 
 }

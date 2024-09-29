@@ -7,6 +7,7 @@ import com.tds.tds_project.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
     Optional<User> findById(Integer id);
+    Optional<User> findByLogin (String login);
     List<User> findAll();
 }
 
