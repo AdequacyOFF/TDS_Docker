@@ -56,9 +56,6 @@ function Register() {
           ВОЙТИ
         </button>
       </form>
-
-      {/* Conditionally render the Link component if userId is set */}
-      {userId && <Link to="/Home">Перейти на домашнюю страницу</Link>}
     </div>
   );
 }
