@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 15.0
--- Dumped by pg_dump version 15.0
+-- Dumped from database version 17.0
+-- Dumped by pg_dump version 17.0
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -161,7 +161,8 @@ ALTER TABLE public.user_team OWNER TO postgres;
 CREATE TABLE public.users (
     user_id integer NOT NULL,
     login text NOT NULL,
-    password text NOT NULL
+    password text NOT NULL,
+    email text NOT NULL
 );
 
 
@@ -172,6 +173,8 @@ ALTER TABLE public.users OWNER TO postgres;
 --
 
 COPY public.project (pr_id, pr_name, description, p_progress, team_id, p_begin, p_end) FROM stdin;
+1	efrgr	fgrethtym,	50	1	2010-10-10	2020-10-20
+2	po;uilkk	xvcbmn,gtgfr4578	0	1	2010-10-10	2020-10-20
 \.
 
 
@@ -180,6 +183,8 @@ COPY public.project (pr_id, pr_name, description, p_progress, team_id, p_begin, 
 --
 
 COPY public.subtasks (sub_id, name, description, status, begin, "end", exe_id, t_id) FROM stdin;
+1	ertuk	weqaefwef3w4t	t	2012-12-12	2014-09-14	1	2
+2	segr7689[pi	sdfwerwe	f	2012-12-12	2014-09-14	2	2
 \.
 
 
@@ -188,6 +193,8 @@ COPY public.subtasks (sub_id, name, description, status, begin, "end", exe_id, t
 --
 
 COPY public.tasks (t_id, t_name, description, t_progress, begin, "end", pr_id) FROM stdin;
+1	fgbgfnrtyh	gfhfhmggh	5	2001-01-01	2002-02-02	1
+2	09876543	765432	90	2012-12-12	2002-02-02	1
 \.
 
 
@@ -205,6 +212,7 @@ COPY public.team (team_id, t_name, lead_id) FROM stdin;
 9	cool_team	1
 10	cool_team	1
 11	cool_team	1
+12	cool_team	1
 \.
 
 
@@ -213,6 +221,9 @@ COPY public.team (team_id, t_name, lead_id) FROM stdin;
 --
 
 COPY public.user_team (user_id, team_id) FROM stdin;
+1	1
+1	3
+1	4
 \.
 
 
@@ -220,8 +231,10 @@ COPY public.user_team (user_id, team_id) FROM stdin;
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.users (user_id, login, password) FROM stdin;
-1	aaahgvgvhg\n	gjffugi\n
+COPY public.users (user_id, login, password, email) FROM stdin;
+2	[poiuhj	erws	56ujuyjh@gmail.com
+3	1	1	1
+1	qwerty	wert	ergerge@mail.ru
 \.
 
 
@@ -229,7 +242,7 @@ COPY public.users (user_id, login, password) FROM stdin;
 -- Name: code_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.code_seq', 11, true);
+SELECT pg_catalog.setval('public.code_seq', 12, true);
 
 
 --
